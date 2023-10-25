@@ -54,4 +54,5 @@ Regime: CLT
 
 Para se candidatar, basta acessar a url de acordo com o nível e realizar o teste para a vaga:
 
-- [Desenvolvedor PHP](teste-php.md)
+- [Desenvolvedor PHP - Teste 1](teste-php-1.md)
+- [Desenvolvedor PHP - Teste 2](teste-php-2.md)
