@@ -1,4 +1,4 @@
-# Teste para candidatos à vaga de Desenvolvedor PHP Júnior
+# Teste para candidatos à vaga de Desenvolvedor PHP
 
 Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclusive velocidade de desenvolvimento. Abaixo explicaremos tudo o que será necessário.
 
