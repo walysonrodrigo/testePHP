@@ -8,6 +8,7 @@ composer dump-autoload --optimize
 
 cp .env.example .env
 
+php artisan migrate
 php artisan cache:clear
 php artisan key:generate
 php artisan serve --host=0.0.0.0 --port=80
