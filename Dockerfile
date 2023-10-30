@@ -28,6 +28,8 @@ RUN cp .env.example .env
 
 RUN composer dump-autoload --optimize && php artisan cache:clear && php artisan key:generate
 
+RUN php artisan migrate
+
 EXPOSE 80
 
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=80"]
