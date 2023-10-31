@@ -13,4 +13,8 @@ class CandidateJobsRepository extends BaseRepository implements CandidateJobsRep
     parent::__construct($jobCandidate);
   }
 
+  public function getAll()
+  {
+    return $this->jobCandidate->with('job')->with('candidate')->get();
+  }
 }

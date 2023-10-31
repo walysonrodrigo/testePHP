@@ -18,11 +18,11 @@ class JobCandidate extends Model
 
     public function job()
     {
-        return $this->belongsTo(Job::class);
+        return $this->belongsTo(Jobs::class);
     }
 
     public function candidate()
     {
-        return $this->belongsTo(Candidate::class);
+        return $this->belongsTo(Candidates::class);
     }
 }

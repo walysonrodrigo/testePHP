@@ -36,10 +36,16 @@ class CandidatesService
         return $this->candidateJobsRepository->create($data);
     }
 
-    public function applications($id)
+    public function applicationsById($id)
     {
         return $this->candidatesRepository->getById($id);
     }
+
+    public function applications()
+    {
+        return $this->candidateJobsRepository->getAll();
+    }
+
 
     public function cancelApplication($data, $id)
     {

@@ -24,13 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'candidates'], function () {
     Route::get('/', [CandidatesController::class, 'index']);
-    Route::get('/{id}', [CandidatesController::class, 'show']);
     Route::post('/', [CandidatesController::class, 'store']);
     Route::put('/{id}', [CandidatesController::class, 'update']);
     Route::delete('/{id}',  [CandidatesController::class, 'destroy']);
 
     Route::post('/apply', [CandidatesController::class,'apply']);
-    Route::get('/{id}/applications', [CandidatesController::class,'applications']);
+    Route::get('/{id}/applicationsById', [CandidatesController::class,'applicationsById']);
+    Route::get('/applications', [CandidatesController::class, 'applications']);
     Route::put('/{id}/cancelapplication', [CandidatesController::class,'cancelApplication']);
 });
 

@@ -43,9 +43,15 @@ class CandidatesController extends Controller
         return $candidate;
     }
 
-    public function applications($id)
+    public function applicationsById($id)
     {
-        $candidate = $this->candidatesService->applications($id);
+        $candidate = $this->candidatesService->applicationsById($id);
+        return $candidate;
+    }
+
+    public function applications()
+    {
+        $candidate = $this->candidatesService->applications();
         return $candidate;
     }
 
