@@ -17,6 +17,9 @@ $(document).ready(function () {
       data: JSON.stringify(data),
       success: function (response) {
         alert("Candidato realizado com sucesso!");
+
+        $('#name').val('');
+        $('#email').val('');
       },
       error: function (error) {
         console.error('Erro:', error);

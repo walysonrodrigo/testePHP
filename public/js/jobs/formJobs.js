@@ -18,6 +18,9 @@ $(document).ready(function () {
       data: JSON.stringify(data),
       success: function (response) {
         alert("Vaga cadastrada com sucesso!");
+
+        $('#title').val('');
+        $('input[name="flexRadioDefault"]').prop('checked', false);
       },
       error: function (error) {
         console.error('Erro:', error);
