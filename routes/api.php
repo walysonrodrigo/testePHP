@@ -4,7 +4,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\JobsController;
-use App\Http\Controllers\JobsCandidatesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'candidates'], function () {
     Route::get('/', [CandidatesController::class, 'index']);
+    Route::get('{id}/getbyid', [CandidatesController::class, 'getbyid']);
     Route::post('/', [CandidatesController::class, 'store']);
     Route::put('/{id}', [CandidatesController::class, 'update']);
     Route::delete('/{id}',  [CandidatesController::class, 'destroy']);
@@ -31,12 +31,13 @@ Route::group(['prefix' => 'candidates'], function () {
     Route::post('/apply', [CandidatesController::class,'apply']);
     Route::get('/{id}/applicationsById', [CandidatesController::class,'applicationsById']);
     Route::get('/applications', [CandidatesController::class, 'applications']);
-    Route::put('/{id}/cancelapplication', [CandidatesController::class,'cancelApplication']);
+    Route::delete('/{id}/cancelapplication', [CandidatesController::class,'cancelApplication']);
 });
 
 Route::group(['prefix' => 'jobs'], function () {
     Route::get('/', [JobsController::class, 'index']);
-    Route::get('/{id}', [JobsController::class, 'show']);
+    Route::get('{id}/getbyid', [JobsController::class, 'getbyid']);
+    Route::get('/open', [JobsController::class, 'jobsOpen']);
     Route::post('/', [JobsController::class, 'store']);
     Route::put('/{id}', [JobsController::class, 'update']);
     Route::delete('/{id}', [JobsController::class, 'destroy']);
