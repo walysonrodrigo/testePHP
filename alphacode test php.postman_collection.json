@@ -11,9 +11,20 @@
 			"item": [
 				{
 					"name": "Candidates",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:3000/api/candidates/",
 							"host": [
@@ -30,12 +41,23 @@
 					"response": []
 				},
 				{
-					"name": "Applications Jobs",
+					"name": "Candidates ID",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:3000/api/candidates/",
+							"raw": "localhost:3000/api/candidates/3/getbyid",
 							"host": [
 								"localhost"
 							],
@@ -43,6 +65,40 @@
 							"path": [
 								"api",
 								"candidates",
+								"3",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Applications By Id Jobs",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/candidates/1/applicationsById/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"candidates",
+								"1",
+								"applicationsById",
 								""
 							]
 						}
@@ -51,11 +107,22 @@
 				},
 				{
 					"name": "Candidates",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:3000/api/candidates/",
+							"raw": "localhost:3000/api/candidates/1",
 							"host": [
 								"localhost"
 							],
@@ -63,7 +130,7 @@
 							"path": [
 								"api",
 								"candidates",
-								""
+								"1"
 							]
 						}
 					},
@@ -135,19 +202,19 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "name",
-									"value": "Francisco Daniel Vasconcelos de Arruda ",
+									"key": "job_id",
+									"value": "2",
 									"type": "text"
 								},
 								{
-									"key": "email",
-									"value": "arruda.daniel20@gmail.com",
+									"key": "candidate_id",
+									"value": "2",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/api/candidates/",
+							"raw": "localhost:3000/api/candidates/apply/",
 							"host": [
 								"localhost"
 							],
@@ -155,6 +222,7 @@
 							"path": [
 								"api",
 								"candidates",
+								"apply",
 								""
 							]
 						}
@@ -209,7 +277,7 @@
 						}
 					},
 					"request": {
-						"method": "PUT",
+						"method": "DELETE",
 						"header": [
 							{
 								"key": "Accept",
@@ -227,7 +295,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/candidates/cancelapplication",
+							"raw": "localhost:3000/api/candidates/1/cancelapplication",
 							"host": [
 								"localhost"
 							],
@@ -235,6 +303,7 @@
 							"path": [
 								"api",
 								"candidates",
+								"1",
 								"cancelapplication"
 							]
 						}
@@ -248,9 +317,20 @@
 			"item": [
 				{
 					"name": "Jobs",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:3000/api/jobs/",
 							"host": [
@@ -261,6 +341,58 @@
 								"api",
 								"jobs",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Jobs ID",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/jobs/1/getbyid",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"jobs",
+								"1",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Applications Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/jobs/open",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"jobs",
+								"open"
 							]
 						}
 					},
@@ -268,11 +400,22 @@
 				},
 				{
 					"name": "Jobs",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:3000/api/jobs/",
+							"raw": "localhost:3000/api/jobs/1",
 							"host": [
 								"localhost"
 							],
@@ -280,7 +423,7 @@
 							"path": [
 								"api",
 								"jobs",
-								""
+								"1"
 							]
 						}
 					},
@@ -288,9 +431,20 @@
 				},
 				{
 					"name": "Creat Jobs",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:3000/api/jobs/",
 							"host": [

@@ -13,6 +13,7 @@
                     <li>Antes de rodar o comando:</li>
                     <li>docker compose up -d testephp-db && sleep 2 && docker compose up testephp-app</li>
                     <li>Certifique-se que as portas que irão subir à aplicação estão disponíveis.</li>
+                    <li>Ademais, para facilitar os testes enviei a collection do postman que pode ser importada em sua máquina. No arquivo encontram-se todos as rotas do beck-end</li>
                 </ul>
                 <h2 class="text-white">Instruções</h2>
                 <ul class="text-white">
