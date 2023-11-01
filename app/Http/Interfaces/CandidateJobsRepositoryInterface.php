@@ -9,4 +9,6 @@ interface CandidateJobsRepositoryInterface
   public function update(array $data, $id);
 
   public function getAll();
+
+  public function delete($id);
 }

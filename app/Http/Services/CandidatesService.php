@@ -15,6 +15,11 @@ class CandidatesService
     {
         return $this->candidatesRepository->getAll();
     }
+
+    public function getById($id)
+    {
+        return $this->candidatesRepository->getById($id);
+    }
     
     public function create($data)
     {
@@ -47,8 +52,8 @@ class CandidatesService
     }
 
 
-    public function cancelApplication($data, $id)
+    public function cancelApplication($id)
     {
-        return $this->candidateJobsRepository->update($data, $id);
+        return $this->candidateJobsRepository->delete($id);
     }
 }

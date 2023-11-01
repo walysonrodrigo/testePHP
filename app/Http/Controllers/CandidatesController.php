@@ -19,6 +19,12 @@ class CandidatesController extends Controller
         return $candidates;
     }
 
+    public function getbyid($id)
+    {
+        $candidates = $this->candidatesService->getById($id);
+        return $candidates;
+    }
+    
     public function store(CandidatesRequest $request)
     {
         $candidate = $this->candidatesService->create($request->all());
@@ -55,9 +61,9 @@ class CandidatesController extends Controller
         return $candidate;
     }
 
-    public function cancelApplication(Request $request)
+    public function cancelApplication($id)
     {
-        $candidate = $this->candidatesService->cancelApplication($request);
+        $candidate = $this->candidatesService->cancelApplication($id);
         return $candidate;
     }
 }
