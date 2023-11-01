@@ -13,4 +13,8 @@ class JobsRepository extends BaseRepository implements JobsRepositoryInterface
     parent::__construct($jobs);
   }
 
+  public function jobsOpen(){
+    return $this->jobs->where('active', '1')->get();
+  }
+
 }

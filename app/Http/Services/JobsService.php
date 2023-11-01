@@ -14,6 +14,16 @@ class JobsService
     return $this->jobsRepository->getAll();
   }
 
+  public function getById($id)
+  {
+    return $this->jobsRepository->getById($id);
+  }
+
+  public function jobsOpen()
+  {
+    return $this->jobsRepository->jobsOpen();
+  }
+
   public function create($data){
     return $this->jobsRepository->create($data);
   }

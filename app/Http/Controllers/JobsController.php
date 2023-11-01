@@ -20,6 +20,18 @@ class JobsController extends Controller
         return $jobs;
     }
 
+    public function getbyid($id)
+    {
+        $jobs = $this->jobsService->getById($id);
+        return $jobs;
+    }
+
+    public function jobsOpen()
+    {
+        $jobs = $this->jobsService->jobsOpen();
+        return $jobs;
+    }
+
     public function store(JobsRequest $request)
     {
         $job = $this->jobsService->create($request->all());
