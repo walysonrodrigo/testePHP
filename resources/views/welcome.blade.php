@@ -7,7 +7,13 @@
                 <!-- Teste para candidatos à vaga de Desenvolvedor PHP -->
                 <h1 class="text-white">Teste para candidatos à vaga de Desenvolvedor PHP</h1>
                 <p class="text-white">Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclusive velocidade de desenvolvimento. Abaixo explicaremos tudo o que será necessário.</p>
-
+                <h2 class="text-white">Instruções do candidato</h2>
+                <ul class="text-white">
+                    <li>Lembre-se de ler o arquivo teste-php.md</li>
+                    <li>Antes de rodar o comando:</li>
+                    <li>docker compose up -d testephp-db && sleep 2 && docker compose up testephp-app</li>
+                    <li>Certifique-se que as portas que irão subir à aplicação estão disponíveis.</li>
+                </ul>
                 <h2 class="text-white">Instruções</h2>
                 <ul class="text-white">
                     <li>O desafio consiste em implementar uma aplicação web utilizando PHP, um banco de dados relacional (Mysql, Postgres ou SQLite), que terá como finalidade a inscrição de candidatos a uma oportunidade de emprego.</li>
