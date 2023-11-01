@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="content-fluid">
-        <div class="row vh-100 mx-0 bg-dark d-flex align-itens-center justify-content-center">
+        <div class="row mx-0 bg-dark d-flex align-itens-center justify-content-center" style="min-height:900px">
             <div class="col-6 p-2 mt-3">
                 <div class="d-flex align-itens-center justify-content-between">
                     <h2 class="text-center text-white">Lista de candidatos</h2>

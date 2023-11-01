@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="content-fluid">
-        <div class="row vh-100 mx-0 bg-dark d-flex align-itens-center justify-content-center">
+    <div class="content-fluid" >
+        <div class="row mx-0 bg-dark d-flex align-itens-center justify-content-center" style="min-height:900px">
             <div class="col-6 p-2 mt-3">
                 <div class="d-flex align-itens-center justify-content-between">
                     <h2 class="text-center text-white">Lista de vagas</h2>
@@ -13,20 +13,18 @@
                 <hr style="background-color: white; height: 2px;">
                 <!-- Table -->
                 <div class="table-wrap">
-                    <div class="table-wrap">
-                        <table id="jobsTable">
-                            <thead>
-                                <tr>
-                                    <th class='text-white'>Nome da Vaga</th>
-                                    <th class='text-white'>Tipo</th>
-                                    <th class='text-white'>Status</th>
-                                    <th class='text-white'>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody class='text-white'>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table id="jobsTable">
+                        <thead>
+                            <tr>
+                                <th class='text-white'>Nome da Vaga</th>
+                                <th class='text-white'>Tipo</th>
+                                <th class='text-white'>Status</th>
+                                <th class='text-white'>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class='text-white'>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
