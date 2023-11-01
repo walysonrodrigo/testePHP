@@ -11,12 +11,14 @@
                         <label class="form-label text-white" for="title">Nome da vaga</label>
                         <input type="text" id="title" placeholder="Nome da vaga" class="form-control" />
                     </div>
+                    <label class="form-label text-white" for="name">Tipo da vaga</label>
                     <select class="form-select mb-4" aria-label="Default select example" id='type'>
                         <option selected>Tipo da vaga</option>
                         <option value="CLT">CLT</option>
                         <option value="PJ">PJ</option>
                         <option value="FL">FreeLancer</option>
                     </select>
+                    <label class="form-label text-white" for="name">Status</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault"  value="1">
                         <label class="form-check-label text-white" for="flexRadioDefault1">
